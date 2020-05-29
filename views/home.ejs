@@ -1,0 +1,11 @@
+<%- include("partials/header") %> 
+
+<br>
+<p> <%= firstContent %>  </p> <br><br>
+
+<% Blog.forEach(element => { %>
+    <h3><%= element.title %></h3>
+    <p><%= (element.body).substring(0,90) + "..." %><a href="post/<%=element.title%>"> Read more</a></p>
+<% }) %>
+
+<%- include("partials/footer") %> 
